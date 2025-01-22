@@ -1,13 +1,15 @@
-import ArtPiecePreview from "../ArtPiecePreview";
+import Image from "next/image";
 
-export default function Spotlight({ artPieces }) {
-  const artPieceRandom =
-    artPieces[Math.floor(Math.random() * artPieces.length)];
-  console.log("artPieceRandom", artPieceRandom);
-
+export default function Spotlight({ randomArtPiece }) {
   return (
     <>
-      <ArtPiecePreview artPieces={artPieceRandom} />
+      <Image
+        alt={randomArtPiece.name}
+        width={randomArtPiece.dimensions.width / 5}
+        height={randomArtPiece.dimensions.height / 5}
+        src={randomArtPiece.imageSource}
+      />
+      <h2>Artist: {randomArtPiece.artist}</h2>
     </>
   );
 }
