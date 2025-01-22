@@ -1,15 +1,30 @@
-import Image from "next/image";
+import {
+  StyledImage,
+  StyledFigure,
+  StyledCaption,
+} from "../../components/ArtPiece.styled";
+import styled from "styled-components";
+
+const StyledDiv = styled.div`
+  width: 30rem;
+  height: 30rem;
+  min-width: 10rem;
+`;
 
 export default function Spotlight({ randomArtPiece }) {
   return (
-    <>
-      <Image
-        alt={randomArtPiece.name}
-        width={randomArtPiece.dimensions.width / 5}
-        height={randomArtPiece.dimensions.height / 5}
-        src={randomArtPiece.imageSource}
-      />
-      <h2>Artist: {randomArtPiece.artist}</h2>
-    </>
+    <StyledDiv>
+      <StyledFigure>
+        <StyledImage
+          alt={randomArtPiece.name}
+          src={randomArtPiece.imageSource}
+          fill
+        />
+        <StyledCaption>
+          {randomArtPiece.name} by {randomArtPiece.artist}
+          <h2>Artist: {randomArtPiece.artist}</h2>
+        </StyledCaption>
+      </StyledFigure>
+    </StyledDiv>
   );
 }
