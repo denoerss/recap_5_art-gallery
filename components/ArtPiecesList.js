@@ -1,5 +1,3 @@
-// import { Image } from "next/image";
-
 import styled from "styled-components";
 import ArtPiecePreview from "./ArtPiecePreview";
 
@@ -13,14 +11,19 @@ const StyledArtPieces = styled.ul`
   justify-content: center;
 `;
 
-export default function ListOfArtPieces({ artPieces }) {
-  console.log("artpieces_", artPieces);
+const StyledListItem = styled.li`
+  width: 30rem;
+  height: 30rem;
+  min-width: 10rem;
+`;
+
+export default function ArtPiecesList({ artPieces }) {
   return (
     <StyledArtPieces>
       {artPieces.map((artPiece) => (
-        <li key={artPiece.slug}>
+        <StyledListItem key={artPiece.slug}>
           <ArtPiecePreview artPiece={artPiece} />
-        </li>
+        </StyledListItem>
       ))}
     </StyledArtPieces>
   );
