@@ -20,10 +20,7 @@ export default function Spotlight({ randomArtPiece }) {
           src={randomArtPiece.imageSource}
           fill
         />
-        <StyledCaption>
-          {randomArtPiece.name} by {randomArtPiece.artist}
-          <h2>Artist: {randomArtPiece.artist}</h2>
-        </StyledCaption>
+        <StyledCaption>Artist: {randomArtPiece.artist}</StyledCaption>
       </StyledFigure>
     </StyledDiv>
   );
