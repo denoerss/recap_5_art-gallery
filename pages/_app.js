@@ -1,6 +1,5 @@
 import GlobalStyle from "../styles";
-import useSWR from "swr";
-import SWRConfig from "swr";
+import useSWR, { SWRConfig } from "swr";
 
 const URL = "https://example-apis.vercel.app/api/art";
 const fetcher = (...args) => fetch(...args).then((response) => response.json());
