@@ -42,7 +42,7 @@ export default function ArtPieceDetails({ artPieces }) {
       <p>
         Colors: <ArtPieceDetailsCircles artPieceColors={artPieceColors} />
       </p>
-      <ArtPieceDetailsComments />
+      <ArtPieceDetailsComments artPiece={artPiece} />
     </>
   );
 }
