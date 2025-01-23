@@ -2,29 +2,38 @@ import styled from "styled-components";
 import Link from "next/link";
 
 export const StyledNav = styled.nav`
-  border-bottom: solid 2px grey;
-  padding: 1rem;
-  height: 30px;
-  position: sticky;
+  display: flex;
+  background-color: grey;
+
+  align-items: center;
+  padding: 5px;
+  height: 60px;
+  width: 100%;
+  position: fixed;
   bottom: 0;
 `;
 
 export const StyledList = styled.ul`
-  max-width: 480px;
-  background-color: grey;
+  width: 100%;
   display: flex;
+  justify-content: space-around;
   list-style: none;
   gap: 1rem;
-  align-items: center;
-  justify-content: space-between;
 `;
+
+export const StyledLi = styled.li`
+  width: 33%;
+  text-align: center;
+`;
+
 export const StyledLink = styled(Link)`
   display: block;
   text-decoration: none;
+
   color: white;
 
-  &:hover {
-    background-color: darkgray;
+  &:not(.active):hover {
+    background-color: black;
     text-decoration: underline;
   }
 `;
