@@ -8,6 +8,7 @@ import styled from "styled-components";
 import { useRouter } from "next/router.js";
 import ArtPieceDetailsComments from "@/components/ArtPieceDetails/ArtPieceDetailsComments";
 import ArtPieceDetailsCircles from "@/components/ArtPieceDetails/ArtPieceDetailsCircles";
+import FavoriteButton from "@/components/FavoriteButton/FavoriteButton";
 
 const StyledDiv = styled.div`
   width: 30rem;
@@ -31,6 +32,7 @@ export default function ArtPieceDetails({ artPieces }) {
       </div>
       <StyledDiv>
         <StyledFigure>
+          <FavoriteButton />
           <StyledImage alt={artPiece.name} src={artPiece.imageSource} fill />
           <StyledCaption>
             {artPiece.name} by {artPiece.artist}
