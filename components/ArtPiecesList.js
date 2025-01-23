@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ArtPiecePreview from "./ArtPiecePreview";
+import Link from "next/link";
 
 const StyledArtPieces = styled.ul`
   list-style-type: none;
@@ -22,7 +23,9 @@ export default function ArtPiecesList({ artPieces }) {
     <StyledArtPieces>
       {artPieces.map((artPiece) => (
         <StyledListItem key={artPiece.slug}>
-          <ArtPiecePreview artPiece={artPiece} />
+          <Link href={`/artpieces/${artPiece.slug}`}>
+            <ArtPiecePreview artPiece={artPiece} />
+          </Link>
         </StyledListItem>
       ))}
     </StyledArtPieces>
