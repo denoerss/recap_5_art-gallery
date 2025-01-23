@@ -7,24 +7,22 @@ const Circle = styled.div`
   background-color: ${(props) => props.color};
 `;
 
-const StyledListItem = styled.li`
-  display: flex;
-`;
-
-const StyledDiv = styled.div`
+const StyledUnList = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  gap: 10px;
+  list-style: none;
 `;
 
 export default function ArtPieceDetailsCircles({ artPieceColors }) {
   return (
-    <StyledDiv>
+    <StyledUnList>
       {artPieceColors.map((artPieceColor) => (
-        <StyledListItem key={artPieceColor}>
+        <li key={artPieceColor}>
           <Circle color={artPieceColor} />
-        </StyledListItem>
+        </li>
       ))}
-    </StyledDiv>
+    </StyledUnList>
   );
 }

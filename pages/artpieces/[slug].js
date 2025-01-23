@@ -18,11 +18,11 @@ const StyledDiv = styled.div`
 export default function ArtPieceDetails({ artPieces }) {
   const router = useRouter();
   const { slug } = router.query;
-  const artPieceIndex = artPieces.findIndex(
-    (artPiece) => artPiece.slug === slug
-  );
-  const artPiece = artPieces[artPieceIndex];
-  const artPieceColors = artPiece.colors;
+  const artPiece = artPieces.find((artPiece) => artPiece.slug === slug);
+
+  if (!artPiece) {
+    return null;
+  }
 
   return (
     <>
@@ -39,9 +39,7 @@ export default function ArtPieceDetails({ artPieces }) {
       </StyledDiv>
       <p>Genre: {artPiece.genre}</p>
       <p>Year: {artPiece.year}</p>
-      <p>
-        Colors: <ArtPieceDetailsCircles artPieceColors={artPieceColors} />
-      </p>
+      Colors: <ArtPieceDetailsCircles artPieceColors={artPiece.colors} />
       <ArtPieceDetailsComments artPiece={artPiece} />
     </>
   );
