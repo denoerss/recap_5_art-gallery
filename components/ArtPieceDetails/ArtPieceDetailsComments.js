@@ -1,4 +1,3 @@
-import "./ArtPieceDetailsComments.module.css";
 import ArtPieceDetailsCommentList from "./ArtPieceDetailsCommentList";
 import ArtPieceDetailsCommentForm from "./ArtPieceDetailsCommentForm";
 import { useState } from "react";
