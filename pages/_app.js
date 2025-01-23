@@ -3,6 +3,7 @@ import {
   StyledNav,
   StyledList,
   StyledLink,
+  StyledLi,
 } from "../components/NavigationBar/NavigationBar.styled";
 import useSWR, { SWRConfig } from "swr";
 const URL = "https://example-apis.vercel.app/api/art";
@@ -20,9 +21,9 @@ export default function App({ Component, pageProps }) {
       />
       <StyledNav>
         <StyledList>
-          <li>
+          <StyledLi>
             <StyledLink href="/">Spotlight</StyledLink>
-          </li>
+          </StyledLi>
           <li>
             <StyledLink href="/artpieces">Art Pieces</StyledLink>
           </li>

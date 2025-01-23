@@ -20,13 +20,20 @@ export const StyledList = styled.ul`
   list-style: none;
   gap: 1rem;
 `;
+
+export const StyledLi = styled.li`
+  width: 33%;
+  text-align: center;
+`;
+
 export const StyledLink = styled(Link)`
   display: block;
   text-decoration: none;
+
   color: white;
 
-  &:hover {
-    background-color: darkgray;
+  &:not(.active):hover {
+    background-color: black;
     text-decoration: underline;
   }
 `;
