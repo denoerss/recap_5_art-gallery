@@ -1,0 +1,12 @@
+.entry-form__field {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  background-color: aqua;
+}
+
+.entry-form__button-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: yellow;
+}
