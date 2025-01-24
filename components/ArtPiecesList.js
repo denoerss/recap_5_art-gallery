@@ -18,6 +18,7 @@ const StyledListItem = styled.li`
 `;
 
 export default function ArtPiecesList({ artPieces }) {
+  console.log("ArtPiecesList", artPieces);
   return (
     <StyledArtPieces>
       {artPieces.map((artPiece) => (
